@@ -1,0 +1,23 @@
+.div {
+  margin: 0;
+  padding: 0;
+  background-color: #e1f5f3;
+  height: 100vh;
+}
+#login .container #login-row #login-column #login-box {
+  margin-top: 120px;
+  max-width: 600px;
+  height: 500px;
+  border:  #CCE6E0;
+  background-color: #CCE6E0;
+}
+#login .container #login-row #login-column #login-box #login-form {
+  padding: 20px;
+}
+#login .container #login-row #login-column #login-box #login-form #register-link {
+  margin-top: -85px;
+}
+.Login-form{
+  position: relative;
+  left: 25px;
+}

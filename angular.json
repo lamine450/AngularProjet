@@ -28,6 +28,7 @@
               "src/assets"
             ],
             "styles": [
+              "node_modules/bootstrap/dist/css/bootstrap.min.css",
               "src/styles.css"
             ],
             "scripts": []
@@ -65,7 +66,8 @@
         "serve": {
           "builder": "@angular-devkit/build-angular:dev-server",
           "options": {
-            "browserTarget": "FilRougeAngula:build"
+            "browserTarget": "FilRougeAngula:build",
+            "proxyConfig": "config.json"
           },
           "configurations": {
             "production": {
@@ -124,5 +126,8 @@
       }
     }
   },
-  "defaultProject": "FilRougeAngula"
+  "defaultProject": "FilRougeAngula",
+  "cli": {
+    "analytics": "f39d50f6-9225-4dca-b58d-397ce37933c8"
+  }
 }

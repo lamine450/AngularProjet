@@ -1,0 +1,26 @@
+<!--<app-header></app-header>-->
+<div class="background">
+  <div class="col-lg-8 text-center offset-lg-2 mt-5">
+    <table class="table" style="box-shadow: 8px 5px 5px gray;">
+      <thead class="thead">
+      <tr>
+        <th scope="col">libelle</th>
+        <th scope="col">Action </th>
+      </tr>
+      </thead>
+      <tbody>
+      <tr *ngFor="let profil of profils">
+        <td>{{profil.libelle}}</td>
+        <td>
+          <button type="button" [routerLink]="'/editProfils'" class="btn btn-light ml-3"><i class="fa fa-edit"></i></button>
+          <button type="button" class="btn btn-info ml-3">Detail</button>
+          <button type="button" class="btn btn-dark ml-3"><i class="fa fa-trash"></i></button>
+        </td>
+
+      </tr>
+
+      </tbody>
+    </table>
+    <a routerLink="/addProfils" href="#" class="btn btn-primary btn-lg " role="button" aria-disabled="true">Add profil</a>
+  </div>
+</div>

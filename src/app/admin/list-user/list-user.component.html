@@ -1,0 +1,32 @@
+<!--<app-header></app-header>-->
+<div class="background">
+<div class="col-lg-8 text-center offset-lg-2 mt-5">
+      <table class="table" style="box-shadow: 8px 5px 5px gray;">
+        <thead class="thead">
+        <tr>
+          <th scope="col">image</th>
+          <th scope="col">Prenom</th>
+          <th scope="col">Nom</th>
+          <th scope="col">Username</th>
+          <th scope="col">Action </th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr *ngFor="let user of users">
+          <td><img src="{{'data:image/jpg;base64,'+user.photo}}"width="50" height="50" alt="photo"> </td>
+          <td>{{user.firtname}}</td>
+          <td>{{user.lastname}}</td>
+          <td>{{user.username}}</td>
+          <td>
+            <button type="button" [routerLink]="['/editUser']" class="btn btn-light ml-3"><i class="fa fa-edit"></i></button>
+            <button type="button" class="btn btn-info ml-3">Detail</button>
+            <button type="button" class="btn btn-dark ml-3"><i class="fa fa-trash"></i></button>
+          </td>
+
+        </tr>
+
+        </tbody>
+      </table>
+  <a routerLink="/addUsers" href="#" class="btn btn-primary btn-lg " role="button" aria-disabled="true">Add User</a>
+</div>
+</div>

@@ -1,0 +1,62 @@
+<!--<app-header></app-header>-->
+<div class="background">
+{{form.value | json}}
+<div class="col-lg-8 text-center offset-lg-2 mt-5">
+  <form [formGroup]="form"  (ngSubmit)="onSubmit()">
+    <div class="form-row">
+      <div class="form-group col-md-4">
+        <label for="inputfirtname4">firstname</label>
+        <input type="text" class="form-control" id="inputfirtname4" placeholder="firtname" formControlName="firtname">
+        <span class="text-danger">*************</span>
+      </div>
+      <div class="form-group col-md-4">
+        <label for="inputlastname4">lastname</label>
+        <input type="text" class="form-control" id="inputlastname4" placeholder="lastname" formControlName="lastname">
+        <span class="text-danger">*************</span>
+      </div>
+      <div class="form-group col-md-4">
+        <label for="inputlastname6">password</label>
+        <input type="password" class="form-control" id="inputlastname6" placeholder="password" formControlName="password">
+        <span class="text-danger">*************</span>
+      </div>
+    </div>
+    <div class="form-row">
+      <div class="form-group col-md-6">
+        <label for="inputUsername" class="form-label text-black font-weight-bold">Username</label>
+        <input type="text" class="form-control" id="inputUsername" placeholder="Username" formControlName="username">
+        <span class="text-danger">*************</span>
+      </div>
+        <div class="form-group col-md-6">
+          <label for="inputEmail" class="form-label text-black font-weight-bold">Email</label>
+          <input type="email" class="form-control" id="inputEmail" placeholder="Email" formControlName="email">
+          <span class="text-danger">*************</span>
+        </div>
+    </div>
+    <div class="form-row">
+      <div class="form-group col-md-6">
+        <label for="inputCity" class="form-label text-black font-weight-bold"></label>
+        <input type="file" (change)="recupererImage($event.target)" class="form-control" id="inputCity" formControlName="photo">
+      </div>
+      <div class="form-group col-md-6">
+        <label for="inputProfil">Profil</label>
+        <select id="inputProfil" class="form-control" formControlName="profils">
+          <option selected>Choose...</option>
+          <option value="ADMIN">Administrateur</option>
+          <option  value="CM">CM</option>
+          <option  value="FORMATEUR">Formateur</option>
+          <option  value="APPRENANT">Apprenant</option>
+        </select>
+      </div>
+    </div>
+    <div class="form-group">
+      <div class="form-check">
+        <input class="form-check-input" type="checkbox" id="gridCheck">
+        <label class="form-check-label" for="gridCheck">
+          Check me out
+        </label>
+      </div>
+    </div>
+    <button type="submit" class="btn btn-primary center" >Soumettre</button>
+  </form>
+</div>
+</div>

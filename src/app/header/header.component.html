@@ -1,0 +1,50 @@
+<nav class="navbar navbar-expand-lg navbar-dark bg-secondary">
+  <a class="navbar-brand " routerLink="/">SONATEL ACADEMY</a>
+  <button class="navbar-toggler"
+          type="button" data-toggle="collapse"
+          data-target="#navbarColor01"
+          aria-controls="navbarColor01"
+          aria-expanded="false"
+          aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+
+  <div class="collapse navbar-collapse" id="navbarColor01">
+    <ul class="navbar-nav mr-auto">
+      <li class="nav-item"  >
+        <a class="nav-link">Briefs<i class="far fa-clipboard-list"></i></a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link"routerLink="/">Rendus<i class="fa fa-inbox-in"></i></a>
+      </li>
+      <li class="nav-item" >
+        <a class="nav-link" routerLink="/">Explorer <i class="fa fa-compass"></i></a>
+      </li>
+      <li class="nav-item" >
+        <a class="nav-link"routerLink="/">Forum <i class="fa fa-comments"></i></a>
+      </li>
+
+      <li class="nav-item dropdown">
+        <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">Parametre<i class="fa fa-cog"></i></a>
+        <div class="dropdown-menu">
+          <a routerLink="/addPromos" class="dropdown-item" href="#">Promos</a>
+          <a routerLink="/listReferentiel" class="dropdown-item" href="#">Referentiel</a>
+          <a routerLink="/listCompetence" class="dropdown-item" href="#">Competence</a>
+          <a routerLink="/listGroupCompetence" class="dropdown-item" href="#">GroupCompetence</a>
+          <a routerLink="/listerProfilsSortie" class="dropdown-item" href="#">listerProfilsSortie</a>
+          <div class="dropdown-divider"></div>
+        </div>
+      </li>
+      <li class="nav-item dropdown">
+        <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">Users<i class="fa fa-user"></i></a>
+        <div class="dropdown-menu">
+          <a routerLink="/listUsers" class="dropdown-item" href="#">listUsers</a>
+          <a routerLink="/listProfils" class="dropdown-item" >Profils</a>
+          <div class="dropdown-divider"></div>
+        </div>
+    </ul>
+    <form class="form-inline my-2 my-lg-0">
+      <a class="btn btn-secondary my-2 my-sm-0" type="submit"><i class="fa fa-bell"></i></a>
+    </form>
+  </div>
+</nav>

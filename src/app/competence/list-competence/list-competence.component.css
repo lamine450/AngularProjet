@@ -1,0 +1,9 @@
+.container-fluid{
+  white-space: nowrap;
+  background-color: #E1E9F5;
+  height: 900px;
+  text-align: center
+}
+P{
+  float: left;
+}
