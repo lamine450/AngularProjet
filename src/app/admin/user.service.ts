@@ -14,5 +14,6 @@ export class UserService {
 
   postUser(data: any): any {
     return this.http.post('/api/admin/users', data);
+
   }
 }

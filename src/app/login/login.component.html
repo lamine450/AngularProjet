@@ -18,8 +18,8 @@
               </i>
             </div>
             <div class="form-group">
-              <label for="password" class="text-info">Password:</label><br>
-              <input type="text" name="password" id="password" class="form-control" [(ngModel)]="password" formControlName="password" >
+              <label for="" class="text-info">Password:</label><br>
+              <input type="password" name="password" id="" class="form-control" [(ngModel)]="password" formControlName="password" >
               <i *ngIf="isValidInput('password')"
                    class="alert alert-danger">
                 <span *ngIf="loginForm.controls['password'].errors">
@@ -36,6 +36,12 @@
                 Connexion
               </button>
             </div>
+            <i *ngIf="loginInvalid"
+               class="alert alert-danger">
+                <span *ngIf="loginForm.controls['username']">
+                  le nom d'utilisateur ou le mot de passe est incorrect
+                </span>
+            </i>
           </form>
         </div>
       </div>

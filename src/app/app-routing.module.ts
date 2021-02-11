@@ -17,6 +17,7 @@ import {AddReferentielComponent} from './referentiel/add-referentiel/add-referen
 import {EditUserComponent} from './admin/edit-user/edit-user.component';
 import {EditProfilComponent} from './profils/edit-profil/edit-profil.component';
 import {AuthGuard} from './guards/auth.guard';
+import {DetailUserComponent} from './admin/detail-user/detail-user.component';
 
 const routes: Routes = [
   {path: '', redirectTo: '/login', pathMatch: 'full'},
@@ -35,6 +36,7 @@ const routes: Routes = [
   {path: 'listReferentiel' , component: ListReferentielComponent },
   {path: 'addReferentiel' , component: AddReferentielComponent},
   {path: 'editUser' , component: EditUserComponent },
+  {path: 'detailUsers' , component: DetailUserComponent },
   {path : '', canActivate: [AuthGuard], children: [
   {path: 'editProfils' , component: EditProfilComponent}
     ]}

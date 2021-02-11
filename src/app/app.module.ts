@@ -1,5 +1,6 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
+import { HashLocationStrategy, LocationStrategy } from '@angular/common';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -34,6 +35,8 @@ import { FooterComponent } from './footer/footer.component';
 import {HTTP_INTERCEPTORS, HttpClientModule} from '@angular/common/http';
 import {FormsModule, ReactiveFormsModule} from '@angular/forms';
 import {LoginInterceptor} from './login/login.interceptor';
+import {NgbModule} from '@ng-bootstrap/ng-bootstrap';
+import { UserPipe } from './admin/user.pipe';
 
 
 @NgModule({
@@ -66,16 +69,18 @@ import {LoginInterceptor} from './login/login.interceptor';
     ListReferentielComponent,
     EditReferentielComponent,
     ProfilReferentielComponent,
-    FooterComponent
+    FooterComponent,
+    UserPipe
   ],
   imports: [
     BrowserModule,
     HttpClientModule,
     AppRoutingModule,
     ReactiveFormsModule,
-    FormsModule
+    FormsModule,
+    NgbModule
   ],
-  providers: [{ provide: HTTP_INTERCEPTORS, useClass: LoginInterceptor, multi: true }],
+  providers: [{ provide: HTTP_INTERCEPTORS, useClass: LoginInterceptor, multi: true },[{provide: LocationStrategy, useClass: HashLocationStrategy}],],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

@@ -1,5 +1,6 @@
 <!--<app-header></app-header>-->
 <div class="background">
+  <a routerLink="/addProfils" href="#" class="btn btn-info btn-lg " role="button" aria-disabled="true"><i class="fa fa-user-plus"></i></a>
   <div class="col-lg-8 text-center offset-lg-2 mt-5">
     <table class="table" style="box-shadow: 8px 5px 5px gray;">
       <thead class="thead">
@@ -12,15 +13,14 @@
       <tr *ngFor="let profil of profils">
         <td>{{profil.libelle}}</td>
         <td>
-          <button type="button" [routerLink]="'/editProfils'" class="btn btn-light ml-3"><i class="fa fa-edit"></i></button>
+          <button type="button" [routerLink]="'/editProfils'" class="btn btn-light ml-3">Edite<i class="fa fa-edit"></i></button>
           <button type="button" class="btn btn-info ml-3">Detail</button>
-          <button type="button" class="btn btn-dark ml-3"><i class="fa fa-trash"></i></button>
+          <button type="button" class="btn btn-danger ml-3">Delete<i class="fa fa-trash"></i></button>
         </td>
 
       </tr>
 
       </tbody>
     </table>
-    <a routerLink="/addProfils" href="#" class="btn btn-primary btn-lg " role="button" aria-disabled="true">Add profil</a>
   </div>
 </div>

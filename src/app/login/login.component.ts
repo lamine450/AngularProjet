@@ -16,6 +16,8 @@ export class LoginComponent implements OnInit {
   user: User[] = [];
   password = '';
   username = '';
+   public loginInvalid: boolean | undefined;
+
   constructor(private fb: FormBuilder,
               private loginService: LoginService,
               private router: Router)
@@ -41,6 +43,7 @@ export class LoginComponent implements OnInit {
   isLogin(): void {
     this.loginService.login(this.username, this.password).subscribe(
       res => {
+        this.loginInvalid = false;
             if (res) {
                 // @ts-ignore
               localStorage.setItem('token', res.token);
@@ -48,6 +51,10 @@ export class LoginComponent implements OnInit {
              } else {
                this.router.navigateByUrl('/login');
              }
+      },
+      (error) => {
+        this.loginInvalid = true;
+        console.log(error);
       });
   }
 }

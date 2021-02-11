@@ -1,6 +1,5 @@
 <!--<app-header></app-header>-->
 <div class="background">
-{{form.value | json}}
 <div class="col-lg-8 text-center offset-lg-2 mt-5">
   <form [formGroup]="form"  (ngSubmit)="onSubmit()">
     <div class="form-row">
@@ -35,7 +34,7 @@
     <div class="form-row">
       <div class="form-group col-md-6">
         <label for="inputCity" class="form-label text-black font-weight-bold"></label>
-        <input type="file" (change)="recupererImage($event.target)" class="form-control" id="inputCity" formControlName="photo">
+        <input type="file" accept="image/*" (change)="recupererImage($event.target)" class="form-control" id="inputCity" formControlName="photo">
       </div>
       <div class="form-group col-md-6">
         <label for="inputProfil">Profil</label>
@@ -56,7 +55,7 @@
         </label>
       </div>
     </div>
-    <button type="submit" class="btn btn-primary center" >Soumettre</button>
+    <button type="submit" class="btn btn-primary center" >submit</button>
   </form>
 </div>
 </div>
