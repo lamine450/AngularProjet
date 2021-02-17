@@ -12,6 +12,7 @@
 <!--</div>-->
 <div class="card-header text-center">
   <h1>Detail d'un Utilisateur</h1>
+  <button routerLink="/home/listUsers" class="btn-info float-left">Retour<i class="fas fa-undo-alt"></i></button>
 <div class="card" style="width: 40rem; float: start" *ngIf="user">
   <img src="{{'data:image/jpg;base64,'+user.photo}}" class="card-img-top style=width:10px,height:10px" alt="{{user.username}}">
   <div class="card-body">
