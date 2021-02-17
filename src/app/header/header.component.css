@@ -1,8 +1,15 @@
-
+.decon {
+  text-decoration: none;
+  background: #ffffff;
+  border-radius: 6px;
+  padding:5px 20px;
+  color: #86bbdb;
+  font-weight: bold;
+}
 
 .navbar {
   color: #090A0A;
-  background: #86BBDB !important;
+  background: #86bbdb !important;
   padding: 5px 16px;
   border-radius: 0;
   border: none;

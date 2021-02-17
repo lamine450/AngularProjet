@@ -2,7 +2,7 @@
   <a class="navbar-brand " routerLink="/">SONATEL ACADEMY</a>
   <button class="navbar-toggler"
           type="button" data-toggle="collapse"
-          data-target="#navbarColor01"
+          data-target="navbarColor01"
           aria-controls="navbarColor01"
           aria-expanded="false"
           aria-label="Toggle navigation">
@@ -25,26 +25,37 @@
       </li>
 
       <li class="nav-item dropdown">
-        <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">Parametre<i class="fa fa-cog"></i></a>
+        <a class="nav-link dropdown-toggle" data-toggle="dropdown"  role="button" aria-haspopup="true" aria-expanded="false">Info<i class="fas fa-info-circle"></i></a>
         <div class="dropdown-menu">
-          <a routerLink="/addPromos" class="dropdown-item" href="#">Promos</a>
-          <a routerLink="/listReferentiel" class="dropdown-item" href="#">Referentiel</a>
-          <a routerLink="/listCompetence" class="dropdown-item" href="#">Competence</a>
-          <a routerLink="/listGroupCompetence" class="dropdown-item" href="#">GroupCompetence</a>
-          <a routerLink="/listerProfilsSortie" class="dropdown-item" href="#">listerProfilsSortie</a>
+          <a routerLink="/home/addPromos" class="dropdown-item" >Promos</a>
+          <a routerLink="/home/listReferentiel" class="dropdown-item" >Referentiel</a>
+          <a routerLink="/home/listCompetence" class="dropdown-item" >Competence</a>
+          <a routerLink="/home/listGroupCompetence" class="dropdown-item" >GroupCompetence</a>
+          <a routerLink="/home/listerProfilsSortie" class="dropdown-item" >listerProfilsSortie</a>
           <div class="dropdown-divider"></div>
         </div>
       </li>
       <li class="nav-item dropdown">
-        <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">Users<i class="fa fa-user"></i></a>
+        <a class="nav-link dropdown-toggle" data-toggle="dropdown"  role="button" aria-haspopup="true" aria-expanded="false">Users<i class="fa fa-user"></i></a>
         <div class="dropdown-menu">
-          <a routerLink="/listUsers" class="dropdown-item" href="#">listUsers</a>
-          <a routerLink="/listProfils" class="dropdown-item" >Profils</a>
+          <a routerLink="/home/listUsers" class="dropdown-item" >listUsers</a>
+          <a routerLink="/home/listProfils" class="dropdown-item" >Profils</a>
           <div class="dropdown-divider"></div>
         </div>
     </ul>
-    <form class="form-inline my-2 my-lg-0">
-      <a class="btn btn-secondary my-2 my-sm-0" type="submit"><i class="fa fa-bell"></i></a>
+    <ul>
+    <li class="nav-item dropdown">
+      <a class="nav-link dropdown-toggle" data-toggle="dropdown"  role="button" aria-haspopup="true" aria-expanded="false">Paramétre<i class="fa fa-cog"></i></a>
+      <div class="dropdown-menu">
+        <a (click)="deconnexion()" type="button" class="decon row-cols-lg-2"><i class="fa fa-sign-in-alt"></i> Déconnexion</a>
+        <div class="dropdown-divider"></div>
+      </div>
+    </li>
+      </ul>
+    <form class="form-inline my-3 my-lg-0">
+<!--      <a class="btn btn-info my-2 my-sm-0" type="submit"><i class="fa fa-bell"></i></a>-->
     </form>
   </div>
 </nav>
+<div class="col-md-2 mb-1 float-left margin-top mg-fluid rounded-circle">
+</div>

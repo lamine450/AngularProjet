@@ -1,1 +1,25 @@
-
+<!--<div *ngIf="user" class="card text-white bg-info mb-4" style="max-width: 50rem; align-content: center;float-wrap: none;top: 10px;left: 500px">-->
+<!--  <h1 class="card-header text-center">Detail d'un Utilisateur</h1>-->
+<!--  <div class="container">-->
+<!--    <div class="example-card">-->
+<!--      <div class="card-header">-->
+<!--        <div class="card-title"></div>-->
+<!--    <h5 class="card-title">{{user.firstname}} {{user.lastname}}</h5>-->
+<!--    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>-->
+<!--    </div>-->
+<!--  </div>-->
+<!--</div>-->
+<!--</div>-->
+<div class="card-header text-center">
+  <h1>Detail d'un Utilisateur</h1>
+<div class="card" style="width: 40rem; float: start" *ngIf="user">
+  <img src="{{'data:image/jpg;base64,'+user.photo}}" class="card-img-top style=width:10px,height:10px" alt="{{user.username}}">
+  <div class="card-body">
+    <h5 class="card-title">{{user.firtname}} {{user.lastname}}</h5>
+    <h6 class="card-subtitle mb-2 text-muted">{{user.profil.libelle}}</h6>
+    <p class="card-text">{{user.email}}</p>
+    <a disabled class="card-link">{{user.username}}</a>
+    <a disabled class="card-link">{{user.Archivage}}</a>
+  </div>
+</div>
+</div>

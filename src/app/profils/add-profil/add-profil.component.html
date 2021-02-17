@@ -5,7 +5,11 @@
     <div class="form-row">
       <div class="form-group col-md-8">
         <label for="inputprofil4"><h1>Ajouter Profil</h1></label>
-        <input class="form-control" id="inputprofil4" placeholder="profil" formControlName="libelle">
+        <input class="form-control" [(ngModel)]="Profil"  id="inputprofil4" placeholder="profil" formControlName="libelle">
+        <i *ngIf="isValidInput('profil')"
+           class="alert alert-danger">
+                <span *ngIf="addProfilForm">le password est obligatoire</span>
+        </i>
       </div>
     </div>
     <div class=" offset-3 ">

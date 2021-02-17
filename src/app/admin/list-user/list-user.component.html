@@ -1,13 +1,15 @@
 <!--<app-header></app-header>-->
 <div class="background">
 <div class="col-lg-8 text-center offset-lg-2 mt-5 justify content">
-  <form>
+  <div class="float-right ">
+    <a routerLink="/home/addUsers" href="#" class="btn btn-info btn-lg mr-3 " role="button" aria-hidden="true"><i class="fa fa-user-plus "></i></a>
+  </div>
+  <form >
     <div class="form-group form-inline">
-      <a routerLink="/addUsers" href="#" class="btn btn-info btn-lg mr-3 " role="button" aria-hidden="true"><i class="fa fa-user-plus"></i></a>
       <label>
         Search User by username:
         <input class="form-control ml-2" type="text" name="searchTerm" [(ngModel)]="searchTerm"
-               (input)="search($event.target.value)"/>
+               (input)="search()"/>
       </label>
     </div>
   </form>
@@ -22,15 +24,15 @@
         </tr>
         </thead>
         <tbody>
-        <tr *ngFor="let user of users | listeUserFilter: searchTerm | slice: (pageActuelle - 1) * nbreItemParPage : (pageActuelle - 1) * nbreItemParPage + nbreItemParPage">
-          <td><img src="{{'data:image/jpg;base64,'+user.photo}}"width="50" height="50" alt="photo"> </td>
+        <tr *ngFor="let user of users| listeUserFilter: searchTerm ">
+          <td><img src="{{'data:image/jpg;base64,'+user.photo}}" width="50" height="50" alt="photo"> </td>
           <td>{{user.firtname}}</td>
           <td>{{user.lastname}}</td>
           <td>{{user.username}}</td>
           <td>
-            <button type="button" [routerLink]="['/editUser']" class="btn btn-light ml-3">Edite<i class="fa fa-edit"></i></button>
-            <button type="button" [routerLink]="['/detailUsers']" class="btn btn-info ml-3">Detail</button>
-            <button type="button"  class="btn btn-danger ml-3">Delete<i class="fa fa-trash"></i></button>
+            <button type="button" (click)="editUse(user.id)" class="btn btn-light ml-3">Edite<i class="fa fa-edit"></i></button>
+            <button type="button" (click)="detailUser(user.id )" class="btn btn-info ml-3">Detail</button>
+            <button type="button" (click)="deleteUse(user.id )" class="btn btn-danger ml-3">Delete<i class="fa fa-trash"></i></button>
           </td>
 
         </tr>

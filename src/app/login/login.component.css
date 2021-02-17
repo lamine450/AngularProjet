@@ -9,15 +9,21 @@
   max-width: 600px;
   height: 500px;
   border:  #CCE6E0;
-  background-color: #CCE6E0;
+  background-color: #86BBDB;
 }
 #login .container #login-row #login-column #login-box #login-form {
-  padding: 20px;
+  padding: 5px;
+  position: relative;
+  top: 30px;
 }
 #login .container #login-row #login-column #login-box #login-form #register-link {
   margin-top: -85px;
 }
 .Login-form{
-  position: relative;
+  position: absolute;
   left: 25px;
+  top:30%;
+}
+.text-info{
+  text-decoration: snow;
 }

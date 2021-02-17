@@ -47,7 +47,7 @@ export class LoginComponent implements OnInit {
             if (res) {
                 // @ts-ignore
               localStorage.setItem('token', res.token);
-              this.router.navigateByUrl('/listUsers');
+              this.router.navigateByUrl('/home/listUsers');
              } else {
                this.router.navigateByUrl('/login');
              }

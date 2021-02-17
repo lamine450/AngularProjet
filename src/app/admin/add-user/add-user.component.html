@@ -1,40 +1,56 @@
 <!--<app-header></app-header>-->
 <div class="background">
 <div class="col-lg-8 text-center offset-lg-2 mt-5">
-  <form [formGroup]="form"  (ngSubmit)="onSubmit()">
+  <h1>Ajout User</h1>
+  <form [formGroup]="addUserForm"  (ngSubmit)="onSubmit()">
     <div class="form-row">
       <div class="form-group col-md-4">
         <label for="inputfirtname4">firstname</label>
-        <input type="text" class="form-control" id="inputfirtname4" placeholder="firtname" formControlName="firtname">
-        <span class="text-danger">*************</span>
+        <input type="text" class="form-control" [(ngModel)]="firtname" id="inputfirtname4" placeholder="firtname" formControlName="firtname" required >
+        <i *ngIf="isValidInput('firtname')"
+           class="alert alert-danger">
+                <span *ngIf="addUserForm.controls['firtname']">le nom d'utilisateur est obligatoire</span>
+        </i>
       </div>
       <div class="form-group col-md-4">
         <label for="inputlastname4">lastname</label>
-        <input type="text" class="form-control" id="inputlastname4" placeholder="lastname" formControlName="lastname">
-        <span class="text-danger">*************</span>
+        <input type="text" class="form-control" [(ngModel)]="lastname" id="inputlastname4" placeholder="lastname" formControlName="lastname" required>
+        <i *ngIf="isValidInput('lastname')"
+           class="alert alert-danger">
+          <span *ngIf="addUserForm.controls['lastname']">le nom d'utilisateur est obligatoire</span>
+        </i>
       </div>
       <div class="form-group col-md-4">
         <label for="inputlastname6">password</label>
-        <input type="password" class="form-control" id="inputlastname6" placeholder="password" formControlName="password">
-        <span class="text-danger">*************</span>
+        <input type="password" class="form-control" [(ngModel)]="password" id="inputlastname6" placeholder="password" formControlName="password" required>
+        <i *ngIf="isValidInput('password')"
+           class="alert alert-danger">
+          <span *ngIf="addUserForm.controls['password']">le nom d'utilisateur est obligatoire</span>
+        </i>
       </div>
     </div>
     <div class="form-row">
       <div class="form-group col-md-6">
         <label for="inputUsername" class="form-label text-black font-weight-bold">Username</label>
-        <input type="text" class="form-control" id="inputUsername" placeholder="Username" formControlName="username">
-        <span class="text-danger">*************</span>
+        <input type="text" class="form-control" [(ngModel)]="username" id="inputUsername" placeholder="Username" formControlName="username" required>
+        <i *ngIf="isValidInput('username')"
+           class="alert alert-danger">
+          <span *ngIf="addUserForm.controls['username']">le nom d'utilisateur est obligatoire</span>
+        </i>
       </div>
         <div class="form-group col-md-6">
           <label for="inputEmail" class="form-label text-black font-weight-bold">Email</label>
-          <input type="email" class="form-control" id="inputEmail" placeholder="Email" formControlName="email">
-          <span class="text-danger">*************</span>
+          <input type="email" class="form-control" [(ngModel)]="email" id="inputEmail" placeholder="Email" formControlName="email" required>
+          <i *ngIf="isValidInput('email')"
+             class="alert alert-danger">
+            <span *ngIf="addUserForm.controls['email']">le nom d'utilisateur est obligatoire</span>
+          </i>
         </div>
     </div>
     <div class="form-row">
       <div class="form-group col-md-6">
         <label for="inputCity" class="form-label text-black font-weight-bold"></label>
-        <input type="file" accept="image/*" (change)="recupererImage($event.target)" class="form-control" id="inputCity" formControlName="photo">
+        <input type="file" accept="/*" (change)="recupererImage($event.target)" class="form-control" id="inputCity" formControlName="photo">
       </div>
       <div class="form-group col-md-6">
         <label for="inputProfil">Profil</label>
@@ -57,6 +73,5 @@
     </div>
     <button type="submit" class="btn btn-primary center" >submit</button>
   </form>
-  {{'data:image/jpg;base64,'+user.photo}}
 </div>
 </div>

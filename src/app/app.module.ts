@@ -37,6 +37,9 @@ import {FormsModule, ReactiveFormsModule} from '@angular/forms';
 import {LoginInterceptor} from './login/login.interceptor';
 import {NgbModule} from '@ng-bootstrap/ng-bootstrap';
 import { UserPipe } from './admin/user.pipe';
+import { NotFoundComponent } from './not-found/not-found.component';
+import { HomeComponent } from './home/home.component';
+import { JumbotronComponent } from './jumbotron/jumbotron.component';
 
 
 @NgModule({
@@ -70,7 +73,10 @@ import { UserPipe } from './admin/user.pipe';
     EditReferentielComponent,
     ProfilReferentielComponent,
     FooterComponent,
-    UserPipe
+    UserPipe,
+    NotFoundComponent,
+    HomeComponent,
+    JumbotronComponent
   ],
   imports: [
     BrowserModule,

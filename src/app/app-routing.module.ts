@@ -18,27 +18,38 @@ import {EditUserComponent} from './admin/edit-user/edit-user.component';
 import {EditProfilComponent} from './profils/edit-profil/edit-profil.component';
 import {AuthGuard} from './guards/auth.guard';
 import {DetailUserComponent} from './admin/detail-user/detail-user.component';
+import {HomeComponent} from './home/home.component';
 
 const routes: Routes = [
   {path: '', redirectTo: '/login', pathMatch: 'full'},
   {path: 'login', component: LoginComponent},
-  {path: 'listUsers', component: ListUserComponent},
-  {path: 'addUsers' , component: AddUserComponent},
-  {path: 'addProfils' , component: AddProfilComponent},
-  {path: 'listProfils' , component: ListProfilComponent},
-  {path: 'listerProfilsSortie' , component: ListProfilDeSortieComponent},
-  {path: 'addProfilsSortie' , component: AddProfilDeSortieComponent},
-  {path: 'listGroupCompetence' , component: ListGrpCompetenceComponent},
-  {path: 'addGroupCompetence' , component: AddGrpCompetenceComponent},
-  {path: 'listCompetence' , component: ListCompetenceComponent},
-  {path: 'addCompetence' , component: AddCompetenceComponent},
-  {path: 'addPromos' , component: AddPromosComponent},
-  {path: 'listReferentiel' , component: ListReferentielComponent },
-  {path: 'addReferentiel' , component: AddReferentielComponent},
-  {path: 'editUser' , component: EditUserComponent },
-  {path: 'detailUsers' , component: DetailUserComponent },
-  {path : '', canActivate: [AuthGuard], children: [
-  {path: 'editProfils' , component: EditProfilComponent}
+  {
+    path: 'home',
+    component: HomeComponent,
+    canActivate: [AuthGuard],
+    children: [
+      {path: 'listUsers', component: ListUserComponent},
+      {path: 'addUsers' , component: AddUserComponent},
+      {path: 'addProfils' , component: AddProfilComponent},
+      {path: 'listProfils' , component: ListProfilComponent},
+      {path: 'listerProfilsSortie' , component: ListProfilDeSortieComponent},
+      {path: 'addProfilsSortie' , component: AddProfilDeSortieComponent},
+      {path: 'listGroupCompetence' , component: ListGrpCompetenceComponent},
+      {path: 'addGroupCompetence' , component: AddGrpCompetenceComponent},
+      {path: 'listCompetence' , component: ListCompetenceComponent},
+      {path: 'addCompetence' , component: AddCompetenceComponent},
+      {path: 'addPromos' , component: AddPromosComponent},
+      {path: 'listReferentiel' , component: ListReferentielComponent },
+      {path: 'addReferentiel' , component: AddReferentielComponent},
+      {path: 'editUser' , component: EditUserComponent },
+      {path: 'detailUsers/:id' , component: DetailUserComponent },
+      {path : '', canActivate: [AuthGuard], children: [
+          {path: 'editProfils/:id' , component: EditProfilComponent}
+    ]},
+      {path : '', canActivate: [AuthGuard], children: [
+          {path: 'editUsers/:id' , component: EditUserComponent}
+        ]},
+
     ]}
 ];
 

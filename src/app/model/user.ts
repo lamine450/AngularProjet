@@ -1,8 +1,13 @@
 export interface User {
+  lastname: string;
+  firtname: string;
+  photo: string;
   id: number;
-  prenom: string;
-  nom: string;
   email: string;
   username: string;
-  image: string;
+  profil: {
+    libelle: string;
+  };
+  Archivage: boolean;
+
       }
